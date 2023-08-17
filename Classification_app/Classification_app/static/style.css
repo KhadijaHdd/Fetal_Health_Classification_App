@@ -1,0 +1,135 @@
+ * {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smooth:antialiased;
+	text-rendering:optimizeLegibility;
+ }
+ .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('backround.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Send the background container to the back */
+  }
+  
+ body {
+	color: #C0C0C0;
+	font-family: Arial, san-serif;
+ }
+
+
+ /* Contact Form Styles */
+ h1 {
+	margin-left: 79px;
+	color:white;
+	margin-top:30px;
+
+ }
+ h4{
+	margin: 0 0 20px 0;
+ }
+ 
+ #contact-form {
+	background-color:rgb(167 167 167 / 72%);
+	padding: 10px 20px 30px 20px;
+	max-width:100%;
+	float: left;
+	left: 20%;
+	right: 20%;
+	position: absolute;
+	margin-top:70px;
+	margin-left: -80px;
+	border-radius:7px;
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+ }
+ #contact-form input,
+ #contact-form select,
+ #contact-form textarea,
+ #contact-form label {
+	font-size: 15px;
+	margin-bottom: 2px;
+	font-family: Arial, san-serif;
+ }
+ #contact-form input,
+ #contact-form select,
+ #contact-form textarea {
+	width:30%;
+	background: #fff;
+	border: 0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 25px;
+	padding: 5px;
+ }
+ #contact-form input:focus,
+ #contact-form select:focus,
+ #contact-form textarea:focus {
+	background-color: #E5E6E7;
+ }
+ #contact-form textarea {
+	width:100%;
+	height: 150px;
+ }
+ #contact-form button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+    background: #2d3a9df2;
+    background-image: -webkit-linear-gradient(bottom, #428fcb 0%, #408cc5 52%);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	border-radius:5px;
+ }
+ #contact-form button[type="submit"]:hover {
+	background-image:linear-gradient(bottom, #5247b3 0%, #493db8 52%);
+	background-image:-moz-linear-gradient(bottom, #5247b3 0%, #5247b3 52%);
+	background-image:-webkit-linear-gradient(bottom, #5247b3 0%, #5247b3 52%);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+ }
+ #contact-form button[type="submit"]:active {
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+ }
+ input:required, textarea:required {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+ }
+ #contact-form .required {
+	font-weight:bold;
+	color: #E5E6E7;
+ }
+
+ /* Hide success/failure message
+	(especially since the php is missing) */
+ #failure, #success {
+	color: #6EA070;
+	display:none;
+ }
+
+ /* Make form look nice on smaller screens */
+ @media only screen and (max-width: 580px) {
+	#contact-form{
+	   left: 3%;
+	   margin-right: 3%;
+	   width: 88%;
+	   margin-left: 0;
+	   padding-left: 3%;
+	   padding-right: 3%;
+	}
+ }

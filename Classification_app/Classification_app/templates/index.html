@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Featal health</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+ <div class="background-container"></div>
+ <div class="login" id="contact-form">
+	<h1>l'état de la santé du foetus {{ prediction_text }}</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="baseline value" placeholder="baseline value" required="required" />
+        <input type="text" name="accelerations" placeholder="accelerations" required="required" />
+		<input type="text" name="fetal_movement" placeholder="fetal_movement" required="required" />
+        <input type="text" name="uterine_contractions" placeholder="uterine_contractions" required="required" />
+        <input type="text" name="light_decelerations" placeholder="light_decelerations" required="required" />
+        <input type="text" name="severe_decelerations" placeholder="severe_decelerations" required="required" />
+        <input type="text" name="prolongued_decelerations" placeholder="prolongued_decelerations" required="required" />
+        <input type="text" name="abnormal_short_term_variability" placeholder="abnormal_short_term_variability" required="required" />
+        <input type="text" name="mean_value_of_short_term_variability" placeholder="mean_value_of_short_term_variability" required="required" />
+        <input type="text" name="percentage_of_time_with_abnormal_long_term_variability" placeholder="percentage_of_time_with_abnormal_long_term_variability" required="required" />
+        <input type="text" name="mean_value_of_long_term_variability" placeholder="mean_value_of_long_term_variability" required="required" />
+        <input type="text" name="histogram_width" placeholder="histogram_width" required="required" />
+        <input type="text" name="histogram_max" placeholder="histogram_max" required="required" />
+        <input type="text" name="histogram_number_of_peaks" placeholder="histogram_number_of_peaks" required="required" />
+        <input type="text" name="histogram_number_of_zeroes" placeholder="histogram_number_of_zeroes" required="required" />
+        <input type="text" name="histogram_median" placeholder="histogram_median" required="required" />
+        <input type="text" name="histogram_variance" placeholder="histogram_variance" required="required" />
+        <input type="text" name="histogram_tendency" placeholder="histogram_tendency" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   
+
+ </div>
+
+
+</body>
+</html>
